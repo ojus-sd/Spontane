@@ -1,0 +1,321 @@
+
+
+/* Left Section - Brand Background */
+.left-section {
+background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%),
+url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23333333" width="1200" height="800"/><circle cx="200" cy="150" r="80" fill="rgba(255,255,255,0.1)"/><circle cx="1000" cy="600" r="150" fill="rgba(255,255,255,0.08)"/></svg>');
+background-size: cover;
+background-position: center;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 40px;
+color: white;
+}
+
+.brand-container {
+max-width: 450px;
+}
+
+.brand-title {
+font-size: 56px;
+font-weight: 700;
+margin-bottom: 15px;
+letter-spacing: -1px;
+}
+
+.brand-subtitle {
+font-size: 18px;
+font-weight: 500;
+margin-bottom: 20px;
+opacity: 0.95;
+}
+
+.brand-description {
+font-size: 16px;
+line-height: 1.6;
+opacity: 0.85;
+font-weight: 300;
+}
+
+/* Right Section - Login Form */
+.right-section {
+background: white;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 40px 60px;
+}
+
+.login-card {
+width: 100%;
+max-width: 400px;
+}
+
+.login-title {
+font-size: 28px;
+font-weight: 700;
+margin-bottom: 30px;
+color: #1a1a1a;
+}
+
+/* Form Styles */
+.login-form {
+display: flex;
+flex-direction: column;
+gap: 16px;
+margin-bottom: 24px;
+}
+
+.form-group {
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+.password-group {
+gap: 12px;
+}
+
+.form-input {
+padding: 12px 16px;
+border: 1px solid #cccccc;
+border-radius: 6px;
+font-size: 14px;
+font-family: inherit;
+transition: all 0.3s ease;
+background: #ffffff;
+}
+
+.form-input:focus {
+outline: none;
+border-color: #333333;
+box-shadow: 0 0 0 3px rgba(51, 51, 51, 0.08);
+}
+
+.form-input::placeholder {
+color: #999999;
+}
+
+.forgot-password {
+font-size: 13px;
+color: #e03c5e;
+text-decoration: none;
+font-weight: 600;
+transition: color 0.3s ease;
+align-self: flex-end;
+}
+
+.forgot-password:hover {
+color: #c91e48;
+text-decoration: underline;
+}
+
+/* Submit Button */
+.submit-btn {
+padding: 12px 16px;
+background: #ffb3d9;
+color: white;
+border: none;
+border-radius: 6px;
+font-size: 16px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s ease;
+margin-top: 8px;
+}
+
+.submit-btn:hover {
+background: #ff99cc;
+transform: translateY(-1px);
+box-shadow: 0 4px 12px rgba(255, 179, 217, 0.4);
+}
+
+.submit-btn:active {
+transform: translateY(0);
+}
+
+/* Error Message */
+.error-message {
+color: #e03c5e;
+font-size: 13px;
+margin-top: 8px;
+display: none;
+}
+
+.error-message.show {
+display: block;
+}
+
+/* Signup Text */
+.signup-text {
+text-align: center;
+font-size: 14px;
+color: #666666;
+margin-bottom: 24px;
+}
+
+.signup-link {
+color: #e03c5e;
+text-decoration: none;
+font-weight: 600;
+transition: color 0.3s ease;
+}
+
+.signup-link:hover {
+color: #c91e48;
+}
+
+/* Divider */
+.divider {
+text-align: center;
+font-size: 13px;
+color: #999999;
+margin: 24px 0;
+position: relative;
+}
+
+.divider::before {
+content: '';
+position: absolute;
+top: 50%;
+left: 0;
+right: 0;
+height: 1px;
+background: #e0e0e0;
+}
+
+.divider span {
+position: relative;
+background: white;
+padding: 0 12px;
+}
+
+/* Social Login */
+.social-login {
+display: flex;
+gap: 12px;
+justify-content: center;
+}
+
+.social-btn {
+width: 44px;
+height: 44px;
+border: 1px solid #cccccc;
+border-radius: 6px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+transition: all 0.3s ease;
+background: white;
+cursor: pointer;
+}
+
+.social-btn:hover {
+border-color: #999999;
+background: #f5f5f5;
+transform: translateY(-2px);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon {
+font-size: 20px;
+font-weight: bold;
+transition: all 0.3s ease;
+}
+
+.google-btn:hover .social-icon {
+color: #4285F4;
+transform: scale(1.15);
+}
+
+.facebook-btn:hover .social-icon {
+color: #1877F2;
+transform: scale(1.15);
+}
+
+.apple-btn:hover .social-icon {
+transform: scale(1.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.page-wrapper {
+grid-template-columns: 1fr;
+}
+
+text
+.left-section {
+    padding: 40px 30px;
+    min-height: 300px;
+}
+
+.brand-title {
+    font-size: 40px;
+}
+
+.brand-subtitle {
+    font-size: 16px;
+}
+
+.right-section {
+    padding: 40px 30px;
+}
+
+.login-card {
+    max-width: 100%;
+}
+
+.login-title {
+    font-size: 24px;
+}
+}
+
+@media (max-width: 480px) {
+.left-section {
+padding: 30px 20px;
+min-height: 250px;
+}
+
+text
+.brand-title {
+    font-size: 32px;
+}
+
+.brand-subtitle {
+    font-size: 14px;
+}
+
+.brand-description {
+    font-size: 14px;
+}
+
+.right-section {
+    padding: 30px 20px;
+}
+
+.login-title {
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.form-input {
+    padding: 11px 14px;
+    font-size: 13px;
+}
+
+.submit-btn {
+    padding: 11px 14px;
+    font-size: 14px;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+}
+
+.social-icon {
+    font-size: 18px;
+}
+}
