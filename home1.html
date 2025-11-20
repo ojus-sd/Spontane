@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spontane - Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+      transition: background 0.4s ease;
+    }
+    /* Navbar */
+    nav {
+      background-color: #000;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+    nav:hover {
+      background-color: #111;
+    }
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+    .logo:hover {
+      opacity: 0.6;
+    }
+    .search-bar {
+      flex: 1;
+      text-align: center;
+    }
+    .search-bar input {
+      width: 50%;
+      padding: 10px 14px;
+      border-radius: 22px;
+      border: none;
+      outline: none;
+      transition: width 0.3s ease;
+    }
+    .search-bar input:focus {
+      width: 60%;
+    }
+    .nav-right a {
+      margin-left: 20px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+    .nav-right a:hover {
+      color: #bbb;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 1.2s forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    .hero video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(40%);
+      transform: scale(1.1);
+      transition: transform 1s ease;
+    }
+    .hero:hover video {
+      transform: scale(1.2);
+    }
+    .hero h1 {
+      font-size: 64px;
+      margin: 0;
+      text-shadow: 0 0 12px #fff, 0 0 24px #999, 0 0 36px #777;
+      animation: glowPulse 2s ease-in-out infinite;
+    }
+    .hero p {
+      font-size: 20px;
+      opacity: 0.9;
+      text-shadow: 0 0 8px #ccc, 0 0 16px #aaa;
+      animation: glowPulseSoft 3s ease-in-out infinite;
+    }
+
+    /* Product Grid */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 40px;
+    }
+    .product {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .product:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .product img:hover {
+      transform: scale(1.05);
+    }
+    .product button {
+      margin-top: 10px;
+      width: 45%;
+      padding: 8px;
+      border: none;
+      border-radius: 20px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .product button:hover {
+      background-color: #555;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+  @keyframes glowPulse {
+      0% { text-shadow: 0 0 10px #fff, 0 0 20px #aaa, 0 0 30px #888; }
+      50% { text-shadow: 0 0 20px #fff, 0 0 40px #bbb, 0 0 60px #999; }
+      100% { text-shadow: 0 0 10px #fff, 0 0 20px #aaa, 0 0 30px #888; }
+    }
+    @keyframes glowPulseSoft {
+      0% { text-shadow: 0 0 6px #ccc, 0 0 12px #aaa; }
+      50% { text-shadow: 0 0 12px #eee, 0 0 22px #ccc; }
+      100% { text-shadow: 0 0 6px #ccc, 0 0 12px #aaa; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+    <a href="aboutus.html" style="text-decoration:none; color:white;">Spontane</a>
+  </div>
+    <div class="search-bar"><input type="text" placeholder="Search products..." /></div>
+    <div class="nav-right">
+      <a href="Spontanehelp.html">Help</a>
+      <a href="Spontanelogin.html">Login</a>
+      <a href="#">Cart</a>
+      <a href="#">Wishlist</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <video autoplay muted loop>
+      <source src="https://rr2---sn-gwpa-qxa6.googlevideo.com/videoplayback?expire=1763638900&ei=FKoeafvKJe-Vt7EPiL-4-Q4&ip=103.47.53.47&id=o-AAwXnK_UOH3r4nch-Xz8-8vx5khPUBSCtbPTzLdy_V0S&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=7&rms=au%2Cau&bui=AdEuB5T0UNb80AEGR4MCAoEoDO8seOdGCCgh1FoqQqlMhZnAKjs_xBOybLLkLIAuoAqy8sstsyMrGbTk&spc=6b0G_DudeY4Yls2eM4izg4Afv-qOYspS-gDfi5XRvRHnAQM6WrqQ8gN0OzUqL3f-kBI&vprv=1&svpuc=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=19.527&lmt=1755092114429279&fexp=51552689,51565116,51565682,51580968&c=ANDROID&txp=5430534&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIhALCaa01ixFTjOwoox8hBRKzzItPFFCBPGycmcgIxwD5eAiARcMvzJezG0cDqbM-yo8bqqNX7mNELAFLWmNa9h4p2vQ%3D%3D&redirect_counter=1&rm=sn-a5me7k7s&rrc=104&req_id=187070e98e1fa3ee&cms_redirect=yes&cmsv=e&ipbypass=yes&met=1763617314,&mh=Xm&mip=115.244.141.202&mm=31&mn=sn-gwpa-qxa6&ms=au&mt=1763617022&mv=m&mvi=2&pl=24&lsparams=cps,ipbypass,met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAJy63JQ-pSxl7roBs4H8njqSKeUHjBjw8M6LtSqYsdheAiEA2FKTXji33AhjAVGfB36nPuJ9zT5boYWWGiDT6Zw6hXk%3D" type="video/mp4" />
+    </video>
+    <div>
+      <h1>Spontane</h1>
+      <p>Your sleek, modern shopping experience</p>
+    </div>
+  </section>
+
+  <section class="products">
+    <div class="product">
+      <img src="https://nutcaseshop.com/cdn/shop/products/NC-HOODIE-0035d.jpg?v=1711786521&width=1445" />
+      <h3>H&M</h3>
+      <p>$49.99</p>
+      <button>Add to Cart</button>
+      <button>Wishlist</button>
+    </div>
+    <div class="product">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Nike_air_Force_1_white_on_white.jpg/330px-Nike_air_Force_1_white_on_white.jpg" />
+      <h3>Air Force 1</h3>
+      <p>$89.99</p>
+      <button>Add to Cart</button>
+      <button>Wishlist</button>
+    </div>
+    <div class="product">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS89b4IubWEd9QfVyieyMFu2l14yVNeU_ol5g&s" />
+      <h3>Jacob's and Co</h3>
+      <p>$129.99</p>
+      <button>Add to Cart</button>
+      <button>Wishlist</button>
+    </div>
+    <div class="product">
+      <img src="data:image/webp;base64,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" />
+      <h3>Zara</h3>
+      <p>$59.99</p>
+      <button>Add to Cart</button>
+      <button>Wishlist</button>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Spontane. All rights reserved.
+  </footer>
+</body>
+</html>
